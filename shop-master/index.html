@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        // 测试接口
+        // var api = "http://localhost:3000";
+        // 线上
+        var api = "http://localhost:3000";
+
+
+        function getMailCode(mail) {
+            $.ajax({
+                type: "POST",
+                url: `${api}/user/getMailCode`,
+                data: {
+                    mail
+                },
+                dataType: 'json',
+                success: function(response) {
+                    console.log(response)
+                }
+            });
+        };
+
+        getMailCode("1091830282@qq.com");
+        getMailCode("2593032790@qq.com");
+
+    })
+</script>
+
+</html>

@@ -1,0 +1,8 @@
+{
+    "name": "shop-master",
+    "version": "1.0.0",
+    "description": "shop-master项目API文档",
+    "title": "shop-master API",
+    "url": "http://localhost:3000",
+    "forceLanguage": "zh-cn"
+}
